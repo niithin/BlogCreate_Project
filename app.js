@@ -5,7 +5,7 @@ methodOverride=require("method-override"),
 expressSanitizer=require("express-sanitizer")	
 mongoose=require("mongoose");
 
-mongoose.connect("mongodb://localhost:27017/restful_blog_app",{useNewUrlParser: true});
+mongoose.connect("mongodb://localhost:27017/restful_blog_app",{useNewUrlParser: true,useUnifiedTopology: true});
 app.set("view engine","ejs");
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended: true}));
